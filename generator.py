@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify
 import requests
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 def query_llama(prompt):
     try:
